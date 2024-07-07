@@ -94,7 +94,7 @@ with col1:
                     #create transcription reader Agent
                     transcription_reader = Agent(
                         role="ATC Blackbox Transcription Reader",
-                        gole = "Read the transcription from an ATC Blackbox and clean the transcription and create a conversation flow.",
+                        goal = "Read the transcription from an ATC Blackbox and clean the transcription and create a conversation flow.",
                         backstory = "This agent specializes in reading the transcript from an Flight Blackbox and clean the transcript to create a conversation flow ao it is easier to interpret.",
                         verbose = True,
                         allow_delegation = False,
@@ -104,7 +104,7 @@ with col1:
                     #create  report writter agent
                     incident_report_writer = Agent(
                         role="Incident Reporter",
-                        gole = "Generate a detailed incident investigation report based on the transcription data.",
+                        goal = "Generate a detailed incident investigation report based on the transcription data.",
                         backstory = "This agent specializes in creating comprehensive incident investigtion reports for aviation incidents. It considers the cleaned transcription data, communication logs and aviation protocols to provide a detailed report.",
                         verbose = True,
                         allow_delegation = False,
