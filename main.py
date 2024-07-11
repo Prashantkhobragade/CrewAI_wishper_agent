@@ -1,3 +1,20 @@
+"""
+import psutil
+import os
+
+# Function to print memory usage
+def print_memory_usage():
+    process = psutil.Process(os.getpid())
+    mem_info = process.memory_info()
+    print(f"RSS: {mem_info.rss / (1024 * 1024)} MB")
+    print(f"VMS: {mem_info.vms / (1024 * 1024)} MB")
+
+# Monitor initial memory usage
+print_memory_usage()
+"""
+
+
+
 import streamlit as st
 import os
 import base64
@@ -138,3 +155,6 @@ with col1:
                     result = crew.kickoff()
                     st.subheader("Incident Report")
                     st.write(result)
+
+                    # Monitor memory usage after generating the report
+                    #print_memory_usage()

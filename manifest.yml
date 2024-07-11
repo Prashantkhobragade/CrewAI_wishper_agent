@@ -2,7 +2,7 @@ applications:
 - name: atcreport
   random-route : true
   path: ./
-  memory: 128M
+  memory: 2048M
   buildpacks:
   - python_buildpack
   command: streamlit run main --host 0.0.0.0 --port 8501
